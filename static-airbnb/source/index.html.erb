@@ -4,7 +4,7 @@ title: Le Wagon Middleman boilerplate
 
 <!-- Your banner code -->
 
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/background-2.jpg');">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%=image_path("background-2.jpg") %>);">
   <div class="banner-content">
     <h1>Some Stuff</h1>
     <p>Very cool stuff, useful and smart</p>
@@ -23,49 +23,44 @@ title: Le Wagon Middleman boilerplate
         <option value="2">2 guests</option>
         <option value="3">3 guests</option>
       </select>
-      <button type="submit" class="btn btn-default">Go go go</button>
+      <button type="submit" class="btn btn-default ajust">Go go go</button>
     </form>
 
   </div>
 </div>
-
-
-
-
 
 <!-- Your features code -->
 
 <div class="features text-center">
   <div class="container">
     <div class="row">
+
       <div class="col-xs-12 col-sm-6 col-md-3">
-        <img src="images/beer.png" alt="">
-        <h3>Beer</h3>
-        <p>A good one</p>
-      </img>
+       <%= image_tag "beer.png" %>
+       <h3>Beer</h3>
+       <p>A good one</p>
+
+     </div>
+
+     <div class="col-xs-12 col-sm-6 col-md-3">
+      <%= image_tag "dollar.png" %>
+      <h3>Money money money</h3>
+      <p>never enough</p>
+
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <img src="images/dollar.png" alt="">
-      <h3>Money money money</h3>
-      <p>never enough</p>
-    </img>
+      <%= image_tag "globe.png" %>
+      <h3>The world</h3>
+      <p>need you</p>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <%= image_tag "heart.png" %>
+      <h3>Heal the world</h3>
+      <p>🎤</p>
+    </div>
   </div>
-
-  <div class="col-xs-12 col-sm-6 col-md-3">
-    <img src="images/globe.png" alt="">
-    <h3>The world</h3>
-    <p>need you</p>
-  </img>
-</div>
-
-<div class="col-xs-12 col-sm-6 col-md-3">
-  <img src="images/heart.png" alt="">
-  <h3>Heal the world</h3>
-  <p>🎤</p>
-</img>
-</div>
-</div>
 </div>
 </div>
 
@@ -74,49 +69,55 @@ title: Le Wagon Middleman boilerplate
 <div class="wrapper-grey">
   <div class="container">
     <div class="row">
+
+      <!-- insert <div class="card"> -->
+
+      <% link_to "https://www.facebook.com/pages/Le-bar-des-PTT/160260680699362"do %>
       <div class="col-xs-12 col-sm-4">
-
-        <!-- insert <div class="card"> -->
-
         <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/bar-des-ptt.jpg');" >
           <div class="card-category">Aix-en-Provence</div>
           <div class="card-description">
             <h2>Les PTT</h2>
             <p>Best PMU around</p>
           </div>
-          <img class="avatar-user avatar" src="images/avatar-vince.jpg" alt="">
-          <a class="card-link" href="https://www.facebook.com/pages/Le-bar-des-PTT/160260680699362"></a>
+          <img class="avatar-user" src="images/avatar-vince.jpg" alt="">
+          <div class="card-link"></div>
         </div>
       </div>
+      <% end %>
+
+      <!-- insert <div class="card"> -->
+
+      <% link_to "https://www.facebook.com/pages/Le-bar-des-PTT/160260680699362"do %>
       <div class="col-xs-12 col-sm-4">
-
-        <!-- insert <div class="card"> -->
-
         <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/bar-des-ptt.jpg');" >
           <div class="card-category">Aix-en-Provence</div>
           <div class="card-description">
             <h2>Les PTT</h2>
             <p>Best PMU around</p>
           </div>
-          <img class="avatar-user avatar" src="images/avatar-vince.jpg" alt="">
-          <a class="card-link" href="https://www.facebook.com/pages/Le-bar-des-PTT/160260680699362"></a>
+          <img class="avatar-user" src="images/avatar-vince.jpg" alt="">
+          <div class="card-link"></div>
         </div>
-
       </div>
-      <div class="col-xs-12 col-sm-4">
-        <!-- insert <div class="card"> -->
+      <% end %>
 
+      <!-- insert <div class="card"> -->
+
+      <% link_to "https://www.facebook.com/pages/Le-bar-des-PTT/160260680699362"do %>
+      <div class="col-xs-12 col-sm-4">
         <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/bar-des-ptt.jpg');" >
           <div class="card-category">Aix-en-Provence</div>
           <div class="card-description">
             <h2>Les PTT</h2>
             <p>Best PMU around</p>
           </div>
-          <img class="avatar-user avatar" src="images/avatar-vince.jpg" alt="">
-          <a class="card-link" href="https://www.facebook.com/pages/Le-bar-des-PTT/160260680699362"></a>
+          <img class="avatar-user" src="images/avatar-vince.jpg" alt="">
+          <div class="card-link"></div>
         </div>
-
       </div>
+      <% end %>
+
     </div>
   </div>
 
@@ -131,7 +132,7 @@ title: Le Wagon Middleman boilerplate
           <div class="form-group">
             <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
           </div>
-          <button type="submit" class="btn btn-info">Let's go</button>
+          <button type="submit" class="btn btn-info ajust">Let's go</button>
         </form>
       </div>
     </div>
@@ -151,7 +152,7 @@ title: Le Wagon Middleman boilerplate
       center: myLatlng,
       scrollwheel: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
-        styles: [] // TODO: replace [] by array from https://snazzymaps.com/
+        styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#0f252e"},{"lightness":17}]}] // TODO: replace [] by array from https://snazzymaps.com/
       };
 
       var map = new google.maps.Map(document.getElementById('map'), myOptions);
