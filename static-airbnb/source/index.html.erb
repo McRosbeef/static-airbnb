@@ -67,57 +67,24 @@ title: Le Wagon Middleman boilerplate
 <!-- Your cards code -->
 
 <div class="wrapper-grey">
+
+  <!-- source/index.html.erb -->
+
   <div class="container">
     <div class="row">
-
-      <!-- insert <div class="card"> -->
-
-      <% link_to "https://www.facebook.com/pages/Le-bar-des-PTT/160260680699362"do %>
+      <% data.flats.each do |owner, flat| %>
       <div class="col-xs-12 col-sm-4">
-        <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/bar-des-ptt.jpg');" >
-          <div class="card-category">Aix-en-Provence</div>
+        <div class="card" style="background-image: url('<%= image_path flat.picture %>');">
+          <div class="card-category"><%= flat.city %></div>
           <div class="card-description">
-            <h2>Les PTT</h2>
-            <p>Best PMU around</p>
+            <h2><%= flat.name %></h2>
+            <p><%= flat.summary %></p>
           </div>
-          <img class="avatar-user" src="images/avatar-vince.jpg" alt="">
-          <div class="card-link"></div>
+          <%= image_tag flat.owner_picture, class:"avatar avatar-user" %>
+          <%= link_to "#", "flats/#{owner}.html", class: "card-link" %>
         </div>
       </div>
       <% end %>
-
-      <!-- insert <div class="card"> -->
-
-      <% link_to "https://www.facebook.com/pages/Le-bar-des-PTT/160260680699362"do %>
-      <div class="col-xs-12 col-sm-4">
-        <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/bar-des-ptt.jpg');" >
-          <div class="card-category">Aix-en-Provence</div>
-          <div class="card-description">
-            <h2>Les PTT</h2>
-            <p>Best PMU around</p>
-          </div>
-          <img class="avatar-user" src="images/avatar-vince.jpg" alt="">
-          <div class="card-link"></div>
-        </div>
-      </div>
-      <% end %>
-
-      <!-- insert <div class="card"> -->
-
-      <% link_to "https://www.facebook.com/pages/Le-bar-des-PTT/160260680699362"do %>
-      <div class="col-xs-12 col-sm-4">
-        <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/bar-des-ptt.jpg');" >
-          <div class="card-category">Aix-en-Provence</div>
-          <div class="card-description">
-            <h2>Les PTT</h2>
-            <p>Best PMU around</p>
-          </div>
-          <img class="avatar-user" src="images/avatar-vince.jpg" alt="">
-          <div class="card-link"></div>
-        </div>
-      </div>
-      <% end %>
-
     </div>
   </div>
 
