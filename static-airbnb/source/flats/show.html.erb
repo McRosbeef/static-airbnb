@@ -6,23 +6,56 @@
 <div class="banner-flat" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%=image_path(flat.picture) %>);">
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-6">
-      <div class="header-flat-details">
-        <div class="header-flat-owner">
-          <%= image_tag flat.owner_picture, class: "avatars-user" %>
-            <p><%= flat.owner_name %></p>
-        </div>
-          <div class="header-flat-name">
-            <h1><%= flat.description %></h1>
-            <p><%= flat.city %></p>
+<div class="header-flat"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-1">
+        <div class="header-flat-details">
+          <div class="header-flat-owner text-center">
+            <%= image_tag flat.owner_picture, class: "avatars-user" %>
+              <p><%= flat.owner_name %></p>
           </div>
+            <div class="header-flat-name">
+              <h1><%= flat.summary %></h1>
+              <p><%= flat.city %></p>
+              <% flat.rating.times do %>
+              <i class="fa fa-star" style="color: #f1c40f"></i>
+              <% end %>
+              <% (5-flat.rating).times do %>
+              <i class="fa fa-star" style="color: grey"></i>
+              <% end %>
+            </div>
+        </div>
       </div>
-    </div>
 
-    <div class="col-xs-12 col-md-6">
+      <div class="col-xs-12 col-sm-4">
+      <h3>Book the flat</h3>
+      <form action="#">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-xs-6">
+            <input type="text" class="form-control" placeholder="check-in" id="check-in">
+          </div>
+          <div class="col-xs-6">
+            <input type="text" class="form-control" placeholder="check-out" id="check-out">
+          </div>
+          <div class="col-xs-12">
+            <div class="form-group">
+              <select name="" id="guests" class="form-control">
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guest</option>
+                <option value="3">3 Guest</option>
+                <option value="4">4 Guest</option>
+              </select>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Book-it" style="width: 100%">
+          </div>
+        </div>
+      </div>
 
+      </form>
+
+      </div>
     </div>
   </div>
 </div>

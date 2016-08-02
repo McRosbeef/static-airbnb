@@ -5,6 +5,7 @@ seb:
   name: Seb's home
   summary: Charming room in Montmartre
   city: Paris, France
+  rating: 3
   wifi: true
 romain:
   owner_name: Romain Paillard
@@ -13,6 +14,7 @@ romain:
   name: Romain's home
   summary: Nice flat in Piccadilly
   city: London, UK
+  rating: 5
   wifi: false
 anne:
   owner_name: Anne Martin
@@ -21,4 +23,5 @@ anne:
   name: Anne's home
   summary: Nice flat in Molenbeck
   city: Brussels, Belgium
+  rating: 2
   wifi: false
