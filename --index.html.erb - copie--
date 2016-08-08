@@ -1,0 +1,196 @@
+---
+title: Le Wagon Middleman boilerplate
+---
+
+<!-- Your banner code -->
+
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%=image_path("background-2.jpg") %>);">
+  <div class="banner-content">
+    <h1>Some Stuff</h1>
+    <p>Very cool stuff, useful and smart</p>
+
+    <button type="button" id="login" class="btn btn-info" data-toggle="modal" data-target="#myModal">Login</button>
+
+    <form class="form-inline">
+      <div class="form-group">
+        <input type="text" class="form-control" id="check-in" placeholder="when you arrive">
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" id="check-out" placeholder="when you leave">
+      </div>
+      <select class="form-control">
+        <option value="1">1 guest</option>
+        <option value="2">2 guests</option>
+        <option value="3">3 guests</option>
+      </select>
+      <button type="submit" class="btn btn-default">Go go go</button>
+    </form>
+
+  </div>
+</div>
+
+<!-- Your features code -->
+
+<div class="features text-center">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-6 col-md-3">
+       <%= image_tag "beer.png" %>
+       <h3>Beer</h3>
+       <p>A good one</p>
+
+     </div>
+
+     <div class="col-xs-12 col-sm-6 col-md-3">
+      <%= image_tag "dollar.png" %>
+      <h3>Money money money</h3>
+      <p>never enough</p>
+
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <%= image_tag "globe.png" %>
+      <h3>The world</h3>
+      <p>need you</p>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <%= image_tag "heart.png" %>
+      <h3>Heal the world</h3>
+      <p>🎤</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Your cards code -->
+
+<div class="wrapper-grey">
+  <div class="container">
+    <div class="row">
+
+      <!-- insert <div class="card"> -->
+
+      <% link_to "https://www.facebook.com/pages/Le-bar-des-PTT/160260680699362"do %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/bar-des-ptt.jpg');" >
+          <div class="card-category">Aix-en-Provence</div>
+          <div class="card-description">
+            <h2>Les PTT</h2>
+            <p>Best PMU around</p>
+          </div>
+          <img class="avatar-user" src="images/avatar-vince.jpg" alt="">
+          <div class="card-link"></div>
+        </div>
+      </div>
+      <% end %>
+
+      <!-- insert <div class="card"> -->
+
+      <% link_to "https://www.facebook.com/pages/Le-bar-des-PTT/160260680699362"do %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/bar-des-ptt.jpg');" >
+          <div class="card-category">Aix-en-Provence</div>
+          <div class="card-description">
+            <h2>Les PTT</h2>
+            <p>Best PMU around</p>
+          </div>
+          <img class="avatar-user" src="images/avatar-vince.jpg" alt="">
+          <div class="card-link"></div>
+        </div>
+      </div>
+      <% end %>
+
+      <!-- insert <div class="card"> -->
+
+      <% link_to "https://www.facebook.com/pages/Le-bar-des-PTT/160260680699362"do %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/bar-des-ptt.jpg');" >
+          <div class="card-category">Aix-en-Provence</div>
+          <div class="card-description">
+            <h2>Les PTT</h2>
+            <p>Best PMU around</p>
+          </div>
+          <img class="avatar-user" src="images/avatar-vince.jpg" alt="">
+          <div class="card-link"></div>
+        </div>
+      </div>
+      <% end %>
+
+    </div>
+  </div>
+
+  <!-- Your newsletter code -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <form class="form-inline text-center">
+          <h3>Want awesome news ?</h3>
+          <p>give us your email</p>
+          <div class="form-group">
+            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+          </div>
+          <button type="submit" class="btn btn-info ">Let's go</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Your map code -->
+
+  <div id="map" style="width: 100%; height: 400px;"></div>
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+  <script type="text/javascript">
+    var myLatlng = new google.maps.LatLng(48.852937,2.364178);
+
+    var myOptions = {
+      zoom: 16,
+      center: myLatlng,
+      scrollwheel: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+        styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#0f252e"},{"lightness":17}]}] // TODO: replace [] by array from https://snazzymaps.com/
+      };
+
+      var map = new google.maps.Map(document.getElementById('map'), myOptions);
+      var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: "You are here!"
+      });
+    </script>
+
+    <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <div class="padded">
+            <div class="form-login">
+              <form action="">
+                <h2>Login</h2>
+                <form action="#">
+                  <div class="form-group">
+                    <label>Your email</label>
+                    <input type="email" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label>Your password</label>
+                    <input type="password" class="form-control">
+                  </div>
+                  <input type="submit" value="Sign In" class="btn btn-info ">
+                </form>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
