@@ -1,0 +1,35 @@
+/* -------------------------------------
+ * Your CSS code for flash notices and alerts
+* ------------------------------------- */
+
+.alert {
+  margin: 0;
+  text-align: center;
+  color: white;
+  // position: fixed;
+  // left: 50%;
+  width: 100%;
+  // margin-left: -200px;
+  // top: 60px;
+  z-index: 100;
+}
+.alert-info {
+  background: white;
+  // color: $green;
+  font-weight: bold;
+  @extend .white-text;
+  @extend .green, .darken-2;
+}
+.alert-warning {
+  @extend .white-text;
+  @extend .red, .darken-1;
+  font-weight: bold;
+}
+
+// .alert-warning span:hover {
+  // @extend .red, .darken-1;
+// }
+
+// .alert-info span:hover {
+//   @extend .green, .darken-2;
+// }
